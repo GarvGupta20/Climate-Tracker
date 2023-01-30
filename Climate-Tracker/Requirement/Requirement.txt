@@ -1,0 +1,17 @@
+First of all the main features of this web app will be to track the news in spectrums
+
+1. Companies
+
+2. Political spectrums
+
+3. Billionaires and Celebrities
+
+4. Moden scientific reports
+
+5. Genuine climate control app
+
+
+
+
+so first of all lets try to render the climate control app and its features as separate feature and a toolkit in 
+news section of the page 

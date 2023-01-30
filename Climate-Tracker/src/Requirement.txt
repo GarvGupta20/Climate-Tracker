@@ -1,0 +1,24 @@
+First of all the main features of this web app will be to track the news in spectrums
+
+1. Companies
+
+2. Political spectrums
+
+3. Billionaires and Celebrities
+
+4. Moden scientific reports
+
+5. Genuine climate control app
+
+
+
+
+so first of all lets try to render the climate control app and its features as separate feature and a toolkit in 
+news section of the page 
+
+
+//for climate information app
+Fetch user's device position. If you're unable to get the user's position, set London as the default location.
+Fetch weather data (forecast data and current weather data) of the location from weather API
+Format the data into charts
+Display the chart and current weather

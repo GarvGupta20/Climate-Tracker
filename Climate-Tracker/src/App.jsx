@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import ServeWeatherApp from './main-components/weather-app/serveWeatherApp'
 import './index.css'
 
 function App() {
@@ -8,9 +8,7 @@ function App() {
   return (
     <>
       <div className="App">
-            Lets start this project!!
-            yeah yeah
-            <p className='text-gray-500'>Hi</p>
+            <ServeWeatherApp />
       </div>
     </>
   )
