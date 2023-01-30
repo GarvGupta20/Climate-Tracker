@@ -7,8 +7,6 @@ export default defineConfig({
   esbuild: {
     jsxFactory: 'h',
     jsxFragment: 'Fragment',
-    jsxInject:`import React from "react"
-     export default a => () { return <><div>Hi</div> </>}`
   },
 })
 
