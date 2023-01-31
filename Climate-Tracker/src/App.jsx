@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import ServeWeatherApp from './main-components/weather-app/serveWeatherApp'
-import './index.css'
+
 
 function App() {
   
