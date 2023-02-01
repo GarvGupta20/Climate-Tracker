@@ -1,0 +1,2 @@
+You need to make sure the api calls are handled by the backend purely where during the whole input process all you have to do is simply 
+make the api call where you backend is stored

@@ -1,35 +1,25 @@
-import React from "react";
-import { useState } from "react";
+import { React,useState } from "react";
+import Input from "../Input";
+import { weatherRequest,getLanAndLat } from './WeatherConfig';
+import makeApiCall from '../../utils/apiCall.js';
+
+function handleSubmit(val)
+{
+
+    makeApiCall(weatherRequest,(res) => {
+        console.log(res);
+    });
+}
 
 function DashBoard() {
-    const [firstName, setFirstName] = useState(''); // Declared a state variable
-
-    function handleChange(ev)
-    {
-       setFirstName(ev.target.value);
-    }
-
-    function handleSubmit(ev)
-    {
-        ev.preventDefault();
-        console.log(import.meta.env);
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${import.meta.env.VITE_API_KEY}`)
-        .then(res => res.json()).then(console.log)
-        
-    }
-
-
+    const [weatherInfo,setWeatherInfo]=useState([]); //Declared a state variable
 
     return (
-        <form onSubmit={handleSubmit}>
-         <label htmlFor="city-field">
-         Search
-          <input name="city-field" value={firstName} onChange={handleChange} 
-          className="border-2 border-black"/>
-         </label> 
-         <input type="submit" value="submit"/>
-        </form>
+    <>
+      <Input name='city-field' submit={handleSubmit} data='Search'/>
+      <p></p>
+    </>
     );
-  }
+}
 
 export default DashBoard;
