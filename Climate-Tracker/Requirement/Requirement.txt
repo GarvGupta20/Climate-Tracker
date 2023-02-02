@@ -15,3 +15,7 @@ First of all the main features of this web app will be to track the news in spec
 
 so first of all lets try to render the climate control app and its features as separate feature and a toolkit in 
 news section of the page 
+
+
+
+The next requirement for the page is the setCampaign feature that will have the qr code or simple typed code to ENCOUNTEREDany climate campaign 

@@ -4,8 +4,8 @@ import axios from "axios";
 //for the api call function always try to give the fo;llowing content : url which is required and also can try params
 
 
-const makeApiCall =async (requestInfo,callback)=> {
-      await axios({
+async function makeApiCall (requestInfo,callback) {
+     const value = await axios({
         url : requestInfo.URL,
         params: requestInfo.queries==undefined ? [] : requestInfo.queries,
         method:"post",
@@ -19,11 +19,14 @@ const makeApiCall =async (requestInfo,callback)=> {
         
       }).then((res) => {
             console.log(res);
-            callback(res.data);
+           // callback(res.data);
       })
       .catch((error) => {
 
             console.log('ERRRRRRROR ENCOUNTERED WHILE MAKING THE API CALL');
+
+            console.log('I thin you have entered the Wrong name of the city or we have an internal api error hence try again with another valid city name');
+
 
             if(error.response.status>=100 && error.response.status<200) throw Error('Informational Error');
             if(error.response.status>=300 && error.response.status<400) throw Error('Redirectional Error');
@@ -34,6 +37,8 @@ const makeApiCall =async (requestInfo,callback)=> {
 
 
       });
+
+      return value.data;
 
 }
 
