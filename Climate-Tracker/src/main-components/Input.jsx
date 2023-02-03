@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function Input({name,submit,data}) {
+function Input({name,submit,data,notValid}) {
     const [val, setVal] = useState('');
     return (
     <>
@@ -12,7 +12,7 @@ function Input({name,submit,data}) {
             <label htmlFor={name}>
                 {data}
                 <input name={name} value={val} onChange={ ev => setVal(ev.target.value)}
-                    className="border-2 border-black" />
+                    className="border-2 border-black" autoComplete="off" onInvalid={() => notValid(val)}/>
             </label>
             <input type="submit" value="submit" />
         </form>

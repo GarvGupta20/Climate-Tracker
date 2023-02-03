@@ -1,6 +1,7 @@
 const defaultQuery={
     lat: 44.34,
     lon: 10.99,
+    units : 'metric',
     appid: import.meta.env.VITE_API_KEY,
 };
 
@@ -10,8 +11,8 @@ const weatherRequest={
     queries: defaultQuery,
     API_KEY:import.meta.env.VITE_API_KEY,
     location: {
-        lat : defaultQuery.latitude,
-        lon:  defaultQuery.longitude,
+        lat : defaultQuery.lat,
+        lon:  defaultQuery.lon,
     },
 };
 

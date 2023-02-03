@@ -3,6 +3,15 @@ import Input from "../Input";
 import { weatherRequest,getLocationCoordinates} from './WeatherConfig';
 import makeApiCall from '../../utils/apiCall.js';
 
+
+
+function notValid(city)
+{
+   
+}
+
+
+
 async function handleSubmit(val)
 {
     if(val=='location')
@@ -12,6 +21,7 @@ async function handleSubmit(val)
           weatherRequest.queries={
             lat : data.coords.latitude, 
             lon : data.coords.longitude,
+            units : 'metric',
             appid : import.meta.env.VITE_API_KEY,
          };
           
@@ -21,11 +31,12 @@ async function handleSubmit(val)
     {
        weatherRequest.queries={
           q : val,
+          units : 'metric',
           appid : import.meta.env.VITE_API_KEY,
        };   
     }
 
-    const latest_data=makeApiCall(weatherRequest);
+    const latest_data=await makeApiCall(weatherRequest);
 }
 
 function DashBoard() {
@@ -35,7 +46,7 @@ function DashBoard() {
 
     return (
     <>
-      <Input name='city-field' submit={handleSubmit} data='Search'/>
+      <Input name='city-field' submit={handleSubmit} data='Search' notValid={notValid}/>
       <button onClick={() => setWeatherInfo('a')}>Click</button>
     </>
     );
