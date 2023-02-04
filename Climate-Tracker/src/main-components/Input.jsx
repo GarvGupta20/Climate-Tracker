@@ -12,7 +12,7 @@ function Input({name,submit,data,notValid}) {
             <label htmlFor={name}>
                 {data}
                 <input name={name} value={val} onChange={ ev => setVal(ev.target.value)}
-                    className="border-2 border-black" autoComplete="off" onInvalid={() => notValid(val)}/>
+                    className="border-2 border-black" autoComplete="off"/>
             </label>
             <input type="submit" value="submit" />
         </form>

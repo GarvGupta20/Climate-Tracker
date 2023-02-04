@@ -16,6 +16,20 @@ const weatherRequest={
     },
 };
 
+const weatherDetails={
+    id : 0,
+    description: "mist",
+    temperature : 0,
+    feels_like : 0,
+    humidity : 0,
+    wind : 0,
+    speed : 0,
+    degree : 0,
+    country : 0,
+    location : 0,
+
+}
+
 
 
 /*Promise function for getting the Location*/
